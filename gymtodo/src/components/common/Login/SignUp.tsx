@@ -1,15 +1,25 @@
 import styled from 'styled-components';
 import Email from '../../../assets/svg/Email.svg';
 import Password from '../../../assets/svg/Password.svg';
+import Member from '../../../assets/svg/Member.svg';
 
-export const Login = () => {
+export const SignUp = () => {
   return (
     <SContainer>
       <div className="layout">
         <div className="card-wrap">
-          <span className="title">Log In</span>
+          <span className="title">Sign Up</span>
           <form autoComplete="off">
             <div className="form-group">
+              <input
+                type="text"
+                name="logtext"
+                className="form-style"
+                placeholder="Your Name"
+                id="logname"
+                autoComplete="off"
+              />
+              <img src={Member} className="member-icon" alt="member" />
               <input
                 type="email"
                 name="logemail"
@@ -111,15 +121,21 @@ const SContainer = styled.div`
   .form-group {
     position: relative;
   }
+  .member-icon {
+    position: absolute;
+    top: 20%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
   .email-icon {
     position: absolute;
-    top: 32%;
+    top: 54%;
     left: 20px;
     transform: translateY(-50%);
   }
   .password-icon {
     position: absolute;
-    top: 82%;
+    top: 88%;
     left: 20px;
     transform: translateY(-50%);
   }
